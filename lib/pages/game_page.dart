@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 import '../controllers/game_controller.dart';
 import '../core/constants.dart';
@@ -35,8 +36,15 @@ class _GamePageState extends State<GamePage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _buildBoard(),
+          _buildCurentPlayer(_controller.currentPlayerName),
+          _buildVerticalSpace(height: 7.0),
+          _buildCurentScore(_controller.winsPlayer1.toString(), _controller.winsPlayer2.toString()),
+          _buildVerticalSpace(height: 15),
           _buildPlayerMode(),
+          _buildVerticalSpace(height: 15),
           _buildResetButton(),
+          _buildVerticalSpace(height: 7.0),
+          _buildShareButton(),
         ],
       ),
     );
@@ -62,17 +70,10 @@ class _GamePageState extends State<GamePage> {
       onTap: () => _onMarkTile(index),
       child: Container(
         color: _controller.tiles[index].color,
-        child: Center(
-          child: Text(
+        child: Image.asset(
             _controller.tiles[index].symbol,
-            style: TextStyle(
-              fontSize: 72.0,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
           ),
         ),
-      ),
     );
   }
 
@@ -105,6 +106,38 @@ class _GamePageState extends State<GamePage> {
     _onMarkTile(index);
   }
 
+  _buildCurentPlayer(String player) {
+      return Container(
+      color: Theme.of(context).accentColor.withOpacity(0.2),
+      height: 40,
+      child: Center(
+        child: Text(
+          'Playing now: $player',
+          style: TextStyle(
+            color: Theme.of(context).accentColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
+  _buildCurentScore(String scorePlayer1, String scorePlayer2) {
+      return Container(
+      color: Theme.of(context).accentColor.withOpacity(0.2),
+      height: 40,
+      child: Center(
+        child: Text(
+          'Player 1: $scorePlayer1   X   Player 2: $scorePlayer2',
+          style: TextStyle(
+            color: Theme.of(context).accentColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
   _buildPlayerMode() {
     return SwitchListTile(
       title: Text(
@@ -130,13 +163,29 @@ class _GamePageState extends State<GamePage> {
     );
   }
 
+  _buildShareButton() {
+    return RaisedButton(
+      padding: const EdgeInsets.all(20),
+      child: Text(kShareButtonLabel),
+      onPressed: _onShare,
+    );
+  }
+
+_buildVerticalSpace({double height = 20.0}) {
+    return SizedBox(height: height);
+  }
+
   _onReset() {
     setState(_controller.reset);
   }
 
+  _onShare() {
+    Share.share('See my project on Github - https://github.com/FuzariFrancisco/TicTacToe-Flutter');
+  }
+
   _showWinnerDialog(winner) {
     final symbol =
-        winner == WinnerType.player1 ? kPlayerOneSymbol : kPlayerTwoSymbol;
+        winner == WinnerType.player1 ? 'Player 1' : 'Player 2';
     showDialog(
       context: context,
       barrierDismissible: false,

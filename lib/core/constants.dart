@@ -4,14 +4,12 @@ const int kBoardSize = 9;
 const double kBoardSpace = 10;
 const int kBoardColumnCount = 3;
 
-const Color kPlayerOneColor = Colors.purpleAccent;
-const Color kPlayerTwoColor = Colors.deepPurpleAccent;
-
-const String kPlayerOneSymbol = 'X';
-const String kPlayerTwoSymbol = 'O';
+const String kPlayerOneSymbol = 'assets/p1.png';
+const String kPlayerTwoSymbol = 'assets/p2.png';
 
 const String kGameTitle = 'Tic Tac Toe';
 const String kResetButtonLabel = 'RESET';
+const String kShareButtonLabel = 'SHARE';
 const String kDialogMessage = 'Press the reset button to start again!';
 
 const String kTiedDialogMessage = 'Game Tied!';
