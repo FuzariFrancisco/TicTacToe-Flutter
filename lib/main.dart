@@ -26,6 +26,7 @@ void main() {
     
 
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: CustomSplash(
         imagePath: 'assets/Logo.png',
         backGroundColor: Colors.lightBlue,
