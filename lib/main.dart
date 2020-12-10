@@ -23,8 +23,6 @@ void main() {
 
     var op = <int, Widget>{1: MyApp(), 2: MyApp()};
 
-    
-
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: CustomSplash(
