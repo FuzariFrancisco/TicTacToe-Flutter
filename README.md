@@ -2,12 +2,14 @@
 
 Jogo da velha (Tic Tac Toe) criado para disciplina de Programação Mobile, criado por Kleber de Oliveira Andrade
 
+Resolvido por Francisco Henrique da Silva Fzuari de Souza
+
 Tutorial de criação deste app: [clique aqui](https://medium.com/@kleberandrade/criando-um-jogo-da-velha-em-flutter-50347537c926)
 
 <p align="center">
-    <img src="https://miro.medium.com/max/334/1*mEhyVlhIPQ3ccv9piPEdrw.png" width="250"/>
-    <img src="https://miro.medium.com/max/334/1*mqMhhPAmNoY_ch1AAvJgeg.png" width="250"/>
-    <img src="https://miro.medium.com/max/334/1*IXXSxfLfRDKCXw_QKw5yvQ.png" width="250"/>
+    <img src="https://github.com/FuzariFrancisco/TicTacToe-Flutter/blob/master/tic1.jpeg" width="250"/>
+    <img src="https://github.com/FuzariFrancisco/TicTacToe-Flutter/blob/master/tic2.jpeg" width="250"/>
+    <img src="https://github.com/FuzariFrancisco/TicTacToe-Flutter/blob/master/tic3.jpeg" width="250"/>
 </p>
 
 ## Como clonar o projeto
@@ -20,11 +22,11 @@ Tutorial de criação deste app: [clique aqui](https://medium.com/@kleberandrade
 
 ## Desafio para aula
 
-*   [ ] Exibir o jogador da vez (Turno do X ou Turno do Y); Pode usar um Text para isso.
-*   [ ] Criar um placar de vitórias para cada jogador; Pode usar Text também
-*   [ ] Criar uma splash screen para o aplicativo; Utilize o [plugin custom_splash](https://pub.dev/packages/custom_splash).
-*   [ ] Adicionar um botão para compartilhar o aplicativo. Utilize o [plugin Share](https://pub.dev/packages/share).
-*   [ ] Trocar o X e Y por duas imagens (exemplo: Finn e Jake de Adventure Time) — como [utilizar imagens](https://flutter.dev/docs/development/ui/assets-and-images). Entendendo como colocar [imagens em um Container](https://medium.com/flutteropen/flutter-widgets-03-image-558e2b24059e).
+*   [x] Exibir o jogador da vez (Turno do X ou Turno do Y); Pode usar um Text para isso.
+*   [x] Criar um placar de vitórias para cada jogador; Pode usar Text também
+*   [x] Criar uma splash screen para o aplicativo; Utilize o [plugin custom_splash](https://pub.dev/packages/custom_splash).
+*   [x] Adicionar um botão para compartilhar o aplicativo. Utilize o [plugin Share](https://pub.dev/packages/share).
+*   [x] Trocar o X e Y por duas imagens (exemplo: Finn e Jake de Adventure Time) — como [utilizar imagens](https://flutter.dev/docs/development/ui/assets-and-images). Entendendo como colocar [imagens em um Container](https://medium.com/flutteropen/flutter-widgets-03-image-558e2b24059e).
 
 ## Licença
 
